@@ -11,7 +11,7 @@ function SignIn() {
   const [showPassword, setShowPassword] = useState(false)
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  
+  const navigate = useNavigate()
 
   
   return (
@@ -66,7 +66,11 @@ function SignIn() {
           </button>
           </div>
           </div>
-          
+          {/* forgot password */}
+          <div className="flex justify-between">
+            <div></div>
+            <p className="text-orange-600 text-right font-medium hover:underline hover:text-blue-700 cursor-pointer" onClick={() => navigate("/forgot-password")}>forgot password</p>
+          </div>
           <button className="w-full p-4 bg-gradient-to-r from-red-400 to-orange-500 text-white rounded-2xl font-semibold shadow-lg hover:scale-105 transition transform cursor-pointer">
             Sign In
           </button>
